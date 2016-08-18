@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:context="com.example.utkarshsingh.new1.MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello Gamer! You get +10 for every correct answer , -5 for wrong answer and 0 for Skipping the question. A game consists of 10 questions and the final score is displayed at the end of the game."
+            android:id="@+id/textView"
+            android:freezesText="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+            android:text="Welcome to the Game of Primes!!!"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@+id/editText2"
+            android:id="@+id/lay"
+            android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:id="@+id/yes"
+            android:enabled="false"
+            android:onClick="yes"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/editText3" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:id="@+id/no"
+            android:enabled="false"
+            android:onClick="no"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/next" />
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/next"
+            android:onClick="next"
+            android:layout_below="@+id/lay"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:editable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_below="@+id/next"
+            android:layout_alignEnd="@+id/editText3"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText3"
+            android:text="Correct : 0"
+            android:layout_below="@+id/editText"
+            android:layout_alignEnd="@+id/next" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText4"
+            android:text="Incorrect : 0"
+            android:layout_below="@+id/editText3"
+            android:layout_alignEnd="@+id/editText3" />
+    </RelativeLayout>
+</ScrollView>
